@@ -1,0 +1,99 @@
+/* Base Styles & Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* Background Image with Dark Overlay */
+    background: linear-gradient(rgba(10, 25, 30, 0.85), rgba(10, 25, 30, 0.85)), 
+                url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1920&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Main Heading */
+h1 {
+    margin-bottom: 25px;
+    color: #00f2fe; /* Glowing Cyan */
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-shadow: 0 0 12px rgba(0, 242, 254, 0.4);
+}
+
+/* Card Container with Glassmorphism Look */
+.form-card {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 242, 254, 0.2);
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #38ef7d; /* Matching Accent Green */
+}
+
+/* Input Fields & Select Dropdowns */
+input, select {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #ffffff;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+select option {
+    background: #0f172a;
+    color: #ffffff;
+}
+
+input:focus, select:focus {
+    border-color: #00f2fe;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+}
+
+/* Matching Neon Cyan/Teal Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+    color: #051319;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 15px rgba(56, 239, 125, 0.3);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(56, 239, 125, 0.5);
+}

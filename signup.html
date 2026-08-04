@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SchoolHub237 - Create Account</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- FontAwesome for the password toggle icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="auth-container">
+    <h2>Welcome to SchoolHub237</h2>
+    <h3>Create an Account</h3>
+
+    <form id="signup-form">
+      <div class="input-group">
+        <input type="text" id="full-name" placeholder="Full Name" required>
+      </div>
+
+      <div class="input-group">
+        <input type="email" id="signup-email" placeholder="Email" required>
+      </div>
+
+      <div class="input-group password-group">
+        <input type="password" id="signup-password" placeholder="Password (6+ chars)" required>
+        <i class="fa-solid fa-eye toggle-password" onclick="togglePasswordVisibility('signup-password', this)"></i>
+      </div>
+
+      <div class="input-group">
+        <select id="account-type" required>
+          <option value="" disabled selected>Account Type</option>
+          <option value="student">Student</option>
+          <option value="teacher">Teacher</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn">Sign Up</button>
+    </form>
+
+    <p class="auth-switch">Already have an account? <a href="index.html">Log In</a></p>
+  </div>
+
+  <script type="module" src="auth.js"></script>
+</body>
+</html>
