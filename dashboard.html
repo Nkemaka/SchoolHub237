@@ -8,9 +8,14 @@
 </head>
 <body>
   <div class="auth-container">
-    <h1>Welcome!</h1>
-    <h2>You're Logged In</h2>
-    <p class="auth-switch">Welcome to the SchoolHub237 Dashboard.</p>
+    <h1>Welcome, <span id="user-name">Loading...</span>!</h1>
+    <h2>Role: <span id="user-role-display">...</span></h2>
+    <p class="auth-switch">Email: <span id="user-email">...</span></p>
+    
+    <button id="logout-btn" class="btn" style="margin-top: 20px;">Log Out</button>
   </div>
+
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="dashboard.js"></script>
 </body>
 </html>
