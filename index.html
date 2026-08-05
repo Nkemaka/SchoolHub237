@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SchoolHub237 - Log In</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <div class="auth-container">
+    <h2>Welcome to SchoolHub237</h2>
+    <h3>Log In</h3>
 
-  <!-- Login Container Only -->
-  <div id="login-container">
-    <h2>Log In</h2>
     <form id="login-form">
-      <input type="email" id="login-email" placeholder="Email" required /><br><br>
-      <input type="password" id="login-password" placeholder="Password" required /><br><br>
-      <button type="submit">Log In</button>
+      <div class="input-group">
+        <input type="email" id="login-email" placeholder="Email" required>
+      </div>
+
+      <div class="input-group password-group">
+        <input type="password" id="login-password" placeholder="Password" required>
+        <i class="fa-solid fa-eye toggle-password" onclick="togglePasswordVisibility('login-password', this)"></i>
+      </div>
+
+      <button type="submit" class="btn">Log In</button>
     </form>
-    <p>Don't have an account? <a href="signin.html">Sign Up here</a></p>
+
+    <p class="auth-switch">Don't have an account? <a href="signup.html">Create an Account</a></p>
   </div>
 
   <script type="module" src="auth.js"></script>
