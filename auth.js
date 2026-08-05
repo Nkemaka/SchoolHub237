@@ -11,10 +11,11 @@ if (signupForm) {
   signupForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const name = document.getElementById("signup-name").value;
+    // Fixed IDs to match signup.html
+    const name = document.getElementById("full-name").value;
     const email = document.getElementById("signup-email").value;
     const password = document.getElementById("signup-password").value;
-    const role = document.getElementById("user-role").value;
+    const role = document.getElementById("account-type").value;
 
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
@@ -29,6 +30,7 @@ if (signupForm) {
       });
 
       alert("Account created successfully!");
+      window.location.href = "dashboard.html"; // Redirects upon creation
     } catch (error) {
       alert("Error: " + error.message);
     }
