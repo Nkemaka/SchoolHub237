@@ -1,45 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SchoolHub237 - Create Account</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- FontAwesome for the password toggle icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SchoolHub237 - Sign Up</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .auth-container {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 350px;
+      text-align: center;
+    }
+    .auth-container h2 {
+      margin-bottom: 20px;
+      color: #333333;
+    }
+    .auth-container input, .auth-container select {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .auth-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .auth-container button:hover {
+      background-color: #218838;
+    }
+    .auth-container p {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+    .auth-container a {
+      color: #007bff;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  <div class="auth-container">
-    <h2>Welcome to SchoolHub237</h2>
-    <h3>Create an Account</h3>
 
+  <div class="auth-container" id="signup-container">
+    <h2>Create Account</h2>
     <form id="signup-form">
-      <div class="input-group">
-        <input type="text" id="full-name" placeholder="Full Name" required>
-      </div>
-
-      <div class="input-group">
-        <input type="email" id="signup-email" placeholder="Email" required>
-      </div>
-
-      <div class="input-group password-group">
-        <input type="password" id="signup-password" placeholder="Password (6+ chars)" required>
-        <i class="fa-solid fa-eye toggle-password" onclick="togglePasswordVisibility('signup-password', this)"></i>
-      </div>
-
-      <div class="input-group">
-        <select id="account-type" required>
-          <option value="" disabled selected>Account Type</option>
-          <option value="student">Student</option>
-          <option value="teacher">Teacher</option>
-          <option value="administrator">Administrator</option>
-        </select>
-      </div>
-
-      <button type="submit" class="btn">Sign Up</button>
+      <input type="text" id="signup-name" placeholder="Full Name" required />
+      <input type="email" id="signup-email" placeholder="Email" required />
+      <input type="password" id="signup-password" placeholder="Password" required />
+      <select id="user-role" required>
+        <option value="" disabled selected>Select Role</option>
+        <option value="student">Student</option>
+        <option value="teacher">Teacher</option>
+        <option value="admin">Admin</option>
+      </select>
+      <button type="submit">Sign Up</button>
     </form>
-
-    <p class="auth-switch">Already have an account? <a href="index.html">Log In</a></p>
+    <p>Already have an account? <a href="index.html">Log In here</a></p>
   </div>
 
   <script type="module" src="auth.js"></script>
